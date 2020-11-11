@@ -1,13 +1,16 @@
+import model.Collecion
+import model.Tarjeta
+
 fun main() {
     val listaColecciones = mutableListOf<Collecion>() //lista mutable vacia
     val listaTarjetas = mutableListOf<Tarjeta>()
     val input: String
 
-    val pepe = Usuario("pepe", "manuel",listaColecciones)
+    val pepe = Usuario("pepe", "manuel", listaColecciones)
     println("1.ver mis colecciones/0.Salir")
     input = getUInput()
 
-    when(input) {
+    when (input) {
         "1" -> {
             println("Viendo colecciones")
             if (listaColecciones.isEmpty()) {
@@ -61,12 +64,21 @@ data class Usuario(val username: String, val password: String, val listaColeccio
         return this.listaColecciones
     }
 
+    fun eliminarColeccion() {
+
+    }
+
+    fun crearTarjeta() {
+
+    }
+
+    fun eliminarTarjeta() {
+
+    }
+
+
 }
 
-data class Collecion(var titulo: String, val listaTarjetas: List<Tarjeta>) {
 
-}
 
-data class Tarjeta(var concepto: String, var definicion: String) {
 
-}
